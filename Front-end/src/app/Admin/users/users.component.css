@@ -1,0 +1,90 @@
+/* .fieldWorkersTitle {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 400;
+}
+table {
+  width: 100%;
+}
+table, tr, th, td {
+  border: 1px solid black;
+}
+
+th {
+  color: white;
+  background-color: black;
+  text-align: center;
+} */
+
+
+.field-workers-container {
+  padding: 20px;
+  background-color: #EBE1B4;
+  overflow-y: auto; /* Make the container scrollable */
+  max-height: 100vh; /* Ensure it doesn't exceed the viewport height */
+}
+
+.fieldWorkersTitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.customer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.customer-card {
+  background: linear-gradient(135deg, #d2d0a9 0%, #eae57f 100%);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 20px;
+  position: relative;
+  border-left: 8px solid #beac37;
+}
+
+.customer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.customer-name {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #AB9A5C;
+  font-weight: bold;
+}
+
+.customer-detail {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.customer-detail i {
+  margin-right: 10px;
+  color: #91860f;
+}
+
+.customer-detail strong {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .customer-card {
+    flex-direction: column;
+  }
+}
+

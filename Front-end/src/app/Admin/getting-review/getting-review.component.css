@@ -1,0 +1,93 @@
+/* .title {
+    font-size: 35px;
+    font-weight: 400;
+  }
+  
+  .admin_review {
+    background-color: white;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  table th {
+    background-color: black;
+    color: white;
+  } */
+
+
+  .review {
+    padding: 20px;
+    background-color: #EBE1B4;
+    max-height: 100vh; /* Ensures it doesn't exceed the viewport height */
+  overflow-y: auto;
+    
+  }
+  
+  .review_title .title {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #171515;
+  }
+  
+  .getting_review {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .review-card {
+    flex: 1 1 calc(33.333% - 20px);
+    background: linear-gradient(135deg, #d2d0a9 0%, #eae57f 100%);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .review-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #a58e3c;
+  }
+  
+  .card-text {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .card-text strong {
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .review-card {
+      flex: 1 1 calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .review-card {
+      flex: 1 1 100%;
+    }
+  }
+  
+  

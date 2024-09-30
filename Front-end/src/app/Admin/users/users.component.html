@@ -1,0 +1,37 @@
+<!-- <div>
+  <div class="fieldWorkersTitle p-3">Field Workers</div>
+  <div>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let customer of customers">
+        <td class="px-1">{{customer.name}}</td>
+        <td class="px-1">{{customer.email}}</td>
+        <td class="px-1">{{customer.phoneNumber}}</td>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+
+
+<div class="field-workers-container">
+  <h1 class="fieldWorkersTitle p-3">Customers</h1>
+  <div class="customer-list">
+    <div *ngFor="let customer of customers" class="customer-card">
+      <div class="card-body">
+        <h3 class="customer-name">{{ customer.name }}</h3>
+        <p class="customer-detail"><i class="fas fa-envelope"></i> <strong>Email:</strong> {{ customer.email }}</p>
+        <p class="customer-detail"><i class="fas fa-phone"></i> <strong>Phone Number:</strong> {{ customer.phoneNumber }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

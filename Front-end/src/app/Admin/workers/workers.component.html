@@ -1,0 +1,58 @@
+<!-- <div>
+  <div class="fieldWorkersTitle p-3">Field Workers</div>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>WorkType</th>
+          <th>District</th>
+          <th>P Number</th>
+          <th>Nic</th>
+          <th>ProfileImage</th>
+          <th>Certificates</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let worker of fieldWorkers">
+          <td class="px-1">{{worker.name}}</td>
+          <td class="px-1">{{worker.workType}}</td>
+          <td class="px-1">{{worker.district}}</td>
+          <td class="px-1">{{worker.phoneNumber}}</td>
+          <td class="px-1">{{worker.nic}}</td>
+          <td class="px-1">{{worker.profileImage}}</td>
+          <td class="px-1">{{worker.certificates}}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+
+<div class="field-workers-container">
+  <h1 class="fieldWorkersTitle p-3">Field Workers</h1>
+  <div class="worker-list">
+    <div *ngFor="let worker of fieldWorkers" class="worker-card">
+      <div class="card-header">
+        <img [src]="worker.profileImage" alt="{{worker.name}}" class="profile-image" />
+      </div>
+      <div class="card-body">
+        <p class="worker-detail"><strong>Name:</strong> {{ worker.name }}</p>
+        <p class="worker-detail"><strong>Work Type:</strong> {{ worker.workType }}</p>
+        <p class="worker-detail"><strong>District:</strong> {{ worker.district }}</p>
+        <p class="worker-detail"><strong>Phone Number:</strong> {{ worker.phoneNumber }}</p>
+        <p class="worker-detail">
+          <strong>NIC:</strong> 
+          <a [href]="worker.nic" target="_blank" class="nic-link">View</a>
+        </p>
+        <p class="worker-detail">
+          <strong>Certificates:</strong> 
+          <a [href]="worker.certificates" target="_blank" class="certificate-link">View</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+

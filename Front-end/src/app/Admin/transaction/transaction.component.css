@@ -1,0 +1,90 @@
+/* .transactionTitle {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 400;
+}
+table {
+  width: 100%;
+}
+table, tr, th, td {
+  border: 1px solid black;
+}
+
+
+th {
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+
+tr{
+  text-align:center;
+} */
+
+
+.transactions {
+  padding: 20px;
+  background-color: #EBE1B4;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 80vh;
+}
+
+.transactionTitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #131213;
+  text-align: center;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.transaction-item {
+  background: linear-gradient(135deg, #d2d0a9 0%, #e9ecef 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-left: 5px solid #beac37;
+  position: relative;
+}
+
+.transaction-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.transaction-detail {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.transaction-detail .label {
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+.transaction-detail::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #AB9A5C;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .transaction-item {
+    flex-direction: column;
+  }
+}
+

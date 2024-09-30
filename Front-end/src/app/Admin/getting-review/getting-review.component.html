@@ -1,0 +1,57 @@
+<!-- <div class="review">
+    <div class="review_title">
+      <p class="title p-3 text-center">Review</p>
+    </div>
+    <div *ngIf="role == 'admin'">
+      <div class="getting_review">
+        <table>
+          <thead>
+            <tr>
+              <th class="py-1">#</th>
+              <th class="py-1">ReviewId</th>
+              <th class="py-1">ReviewerId</th>
+              <th class="py-1"> Email</th>
+              <th class="py-1">ReviewText</th>
+              <th class="py-1">TimeStamp</th>
+              <th class="py-1">RatingValue</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let review of reviews; let i = index">
+              <td class="py-2 px-2">{{ i + 1 }}</td>
+              
+              <td class="py-2 px-2">{{ review.reviewId }}</td>
+              <td class="py-2 px-2">{{ review.reviewerId }}</td>
+              <td class="py-2 px-2">{{ review.email }}</td>
+              <td class="py-2 px-2">{{ review.reviewText }}</td>
+              <td class="py-2 px-2">{{ review.timeStamp }}</td>
+              <td class="py-2 px-2">{{ review.ratingValue }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div> -->
+
+
+  <div class="review">
+    <div class="review_title">
+      <p class="title p-3 text-center">Review</p>
+    </div>
+    <div *ngIf="role == 'admin'">
+      <div class="getting_review">
+        <div *ngFor="let review of reviews; let i = index" class="card review-card">
+          <div class="card-body">
+            <h5 class="card-title">Review #{{ i + 1 }}</h5>
+            <p class="card-text"><strong>ReviewId:</strong> {{ review.reviewId }}</p>
+            <p class="card-text"><strong>ReviewerId:</strong> {{ review.reviewerId }}</p>
+            <p class="card-text"><strong>Email:</strong> {{ review.email }}</p>
+            <p class="card-text"><strong>ReviewText:</strong> {{ review.reviewText }}</p>
+            <p class="card-text"><strong>TimeStamp:</strong> {{ review.timeStamp }}</p>
+            <p class="card-text"><strong>RatingValue:</strong> {{ review.ratingValue }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

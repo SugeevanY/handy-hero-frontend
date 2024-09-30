@@ -1,0 +1,43 @@
+<!-- <div>
+  <h1  class="transactionTitle ">Payments</h1>
+  <table>
+    <thead>
+    <tr>
+      <th>Employee Id</th>
+      <th>Customer Id</th>
+      <th>Amount</th>
+      <th>Date</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let transaction of payments ">
+      <td>{{ transaction.fieldworkerId }}</td>
+      <td>{{ transaction.customerId }}</td>
+      <td>{{ transaction.amount }}</td>
+      <td>{{transaction.date}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+ -->
+
+ <div class="transactions">
+  <h1 class="transactionTitle">Payments</h1>
+  <div class="transaction-list">
+    <div *ngFor="let transaction of payments" class="transaction-item">
+      <div class="transaction-detail">
+        <span class="label">Employee Id:</span> {{ transaction.fieldworkerId }}
+      </div>
+      <div class="transaction-detail">
+        <span class="label">Customer Id:</span> {{ transaction.customerId }}
+      </div>
+      <div class="transaction-detail">
+        <span class="label">Amount:</span> {{ transaction.amount }}
+      </div>
+      <div class="transaction-detail">
+        <span class="label">Date:</span> {{ transaction.date }}
+      </div>
+    </div>
+  </div>
+</div>

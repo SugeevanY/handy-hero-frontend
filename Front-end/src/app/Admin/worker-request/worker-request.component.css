@@ -1,0 +1,122 @@
+.field-workers-container {
+  padding: 20px;
+  background-color: #EBE1B4;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.fieldWorkersTitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.worker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.worker-tile {
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+}
+
+.worker-tile:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tile-header {
+  position: relative;
+  height: 150px;
+  background-color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #d2d0a9;
+  z-index: 0;
+}
+
+.tile-body {
+  padding: 20px;
+  background: linear-gradient(135deg, #e9f4ff 0%, #ffffff 100%);
+}
+
+.worker-detail {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.worker-detail strong {
+  color: #333;
+}
+
+.certificate-link,
+.nic-link {
+  color: #e55730;
+  text-decoration: none;
+}
+
+.certificate-link:hover,
+.nic-link:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+._primaryButton {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+._primaryButton.accept {
+  background-color: #222623;
+}
+
+._primaryButton.accept:hover {
+  background-color: #218838;
+}
+
+._primaryButton.reject {
+  background-color: #dc3545;
+}
+
+._primaryButton.reject:hover {
+  background-color: #c82333;
+}
